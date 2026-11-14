@@ -4,5 +4,7 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: print welcome message
-        run: echo "Welcome to GHA"
+      - name: run multiple commands in a single step
+        run: |
+          echo "This is line 1"
+          echo "This is line 2"
