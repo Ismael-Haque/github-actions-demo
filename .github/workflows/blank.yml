@@ -6,3 +6,13 @@ jobs:
     steps:
       - name: Build Step
         run: echo "A demo build step"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Step
+        run: echo "A demo test step"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment Step
+        run: echo "A demo build step"
