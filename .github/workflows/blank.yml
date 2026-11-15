@@ -4,7 +4,12 @@ on:
     branches:
       - main
       - develop
-      - 'release/**'
+      - "release/**"
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
