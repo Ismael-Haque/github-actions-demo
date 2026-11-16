@@ -1,25 +1,8 @@
 name: Hello World- Local!
-on:
-  push:
-    branches:
-      - main
-      - develop
-      - 'release/**'
+on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Build Step
-        run: echo "A demo build step"
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Test Step
-        run: echo "A demo test step"
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Deployment Step
-        run: echo "A demo build step"
+        run: echo "My name is - ${{ vars.MY_NAME }}."
