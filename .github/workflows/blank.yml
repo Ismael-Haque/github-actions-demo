@@ -1,8 +1,10 @@
-name: Hello World- Local!
+name: github actions demo
 on: workflow_dispatch
 jobs:
-  build:
+  actions-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Build Step
-        run: echo "My name is - ${{ secrets.DOCKER_PASSWORD }}."
+      - name: Checkout the code
+        uses: actions/checkout@v4
+      - name: Print index.html
+        run: cat index.html
